@@ -59,6 +59,39 @@
   
 </div>
 
+
+<!--When read by a screen reader, Below button will read Submit-->
+<button>Submit</button>
+<br><br>
+
+<!-- Better example of aria-labelledby attribute. When read by a screen reader, Below checkbox will read Accept-->
+<div role="checkbox" aria-checked="true" checked tabindex="0" aria-labelledby="acceptText"></div><h4 id="acceptText">Accept</h4>
+
+
+
+
+<!-- When read by a screen reader. Below checkbox will read Kangaroo-->
+<input type="checkbox" id="roo" name="roo">
+<label for="roo">Kangaroo</label>
+
+
+
+
+<!-- Below checkbox will read Monkey, because aria-label value will be read instead of the text-->
+<input type="checkbox" id="roo" name="roo" aria-label="Monkey">
+<label for="roo">Kangaroo</label>
+
+
+
+
+<!-- Below checkbox will read Animals, because aria-labelledby attribute's value takes precedence over aria-label and the text "Kangaroo" within the label for tag-->
+<span id="someName">Animals</span>
+
+<input type="checkbox" id="roo" name="roo" aria-labelledby="someName">
+<label for="roo">Kangaroo</label>
+
+
+
 <footer><a href="https://webaim.org/">Learn more about Web Content Accessibility Guidelines</a></footer>
 </main>
   <script src="checkboxes.js"></script>
